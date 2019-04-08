@@ -6,7 +6,6 @@ class Tablero
 
     public function __construct($x, $y)
     {
-        $array = array();
         $columna = $x - 1;
         $y = $y - 1;
         $fila = array();
@@ -16,9 +15,8 @@ class Tablero
         }
 
         for($i= 0; $i <= $columna; $i++){
-          $array[]= $fila;
+          $this->tablero[]= $fila;
         }
-        $this->tablero = $array;
     }
 
     public function marcar($x, $y, $marca)
